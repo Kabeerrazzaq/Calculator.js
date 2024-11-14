@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="flex items-center justify-center mt-[10vh]">
+        <div class="h-[500px] w-[350px] rounded-3xl border-[3px] border-solid border-black text-black font-bold bg-black whitespace-nowrap">
+            <!-- input div start here -->
+            <div class="flex justify-center">
+                <input id="display" class="font-bold w-full h-[20vh] rounded-3xl bg-black text-white text-5xl" type="text" readonly>
+            </div>
+            <!-- input div end here -->
+
+            <!-- Buttons start here -->
+            <div class="flex items-center justify-around">
+                <button id="Clearbtn" onclick="clearDisplay()" class="w-16 h-16 bg-gray-700 text-white rounded-full text-3xl">AC</button>
+                <button class="w-16 h-16 bg-gray-700 text-white rounded-full text-3xl">+/-</button>
+                <button class="w-16 h-16 bg-gray-700 text-white rounded-full text-3xl">%</button>
+                <button onclick="setOperator('/')" class="w-16 h-16 bg-yellow-600 text-white rounded-full text-3xl">&divide;</button>
+            </div>
+            <div class="flex items-center justify-around mt-2">
+                <button class="btn w-16 h-16 bg-gray-700 text-white rounded-full text-3xl" onclick="appendNumber('7')">7</button>
+                <button class="btn w-16 h-16 bg-gray-700 text-white rounded-full text-3xl" onclick="appendNumber('8')">8</button>
+                <button class="btn w-16 h-16 bg-gray-700 text-white rounded-full text-3xl" onclick="appendNumber('9')">9</button>
+                <button onclick="setOperator('*')" class="w-16 h-16 bg-yellow-600 text-white rounded-full text-3xl">&#xd7;</button>
+            </div>
+            <div class="flex items-center justify-around mt-2">
+                <button class="btn w-16 h-16 bg-gray-700 text-white rounded-full text-3xl" onclick="appendNumber('4')">4</button>
+                <button class="btn w-16 h-16 bg-gray-700 text-white rounded-full text-3xl" onclick="appendNumber('5')">5</button>
+                <button class="btn w-16 h-16 bg-gray-700 text-white rounded-full text-3xl" onclick="appendNumber('6')">6</button>
+                <button onclick="setOperator('-')" class="w-16 h-16 bg-yellow-600 text-white rounded-full text-3xl">-</button>
+            </div>
+            <div class="flex items-center justify-around mt-2">
+                <button class="btn w-16 h-16 bg-gray-700 text-white rounded-full text-3xl" onclick="appendNumber('1')">1</button>
+                <button class="btn w-16 h-16 bg-gray-700 text-white rounded-full text-3xl" onclick="appendNumber('2')">2</button>
+                <button class="btn w-16 h-16 bg-gray-700 text-white rounded-full text-3xl" onclick="appendNumber('3')">3</button>
+                <button onclick="setOperator('+')" class="w-16 h-16 bg-yellow-600 text-white rounded-full text-3xl">+</button>
+            </div>
+            <div class="flex items-center mt-2">
+                <button class="btn w-[10vw] ml-2 h-16 bg-gray-700 text-white rounded-full text-3xl" onclick="appendNumber('0')">0</button>
+                <button class="w-16 h-16 ml-9 bg-gray-700 text-white rounded-full text-3xl" onclick="appendNumber('.')">.</button>
+                <button onclick="Calculate()" class="w-16 h-16 ml-6 bg-yellow-600 text-white rounded-full text-3xl">=</button>
+            </div>
+            <!-- Buttons end here -->
+        </div>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
